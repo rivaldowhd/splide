@@ -81,7 +81,9 @@ export default ( Splide, Components, name ) => {
 		 *
 		 * @type {boolean}
 		 */
-		required: options.lazyLoad,
+		required() {
+			return options.lazyLoad;
+		},
 
 		/**
 		 * Called when the component is mounted.

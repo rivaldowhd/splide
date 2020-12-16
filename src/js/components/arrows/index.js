@@ -73,7 +73,9 @@ export default ( Splide, Components, name ) => {
 		 *
 		 * @type {boolean}
 		 */
-		required: Splide.options.arrows,
+		required() {
+			return Splide.options.arrows;
+		},
 
 		/**
 		 * Called when the component is mounted.

@@ -35,7 +35,9 @@ export default ( Splide, Components ) => {
 		 *
 		 * @type {boolean}
 		 */
-		required: options.cover,
+		required() {
+			return options.cover;
+		},
 
 		/**
 		 * Called when the component is mounted.

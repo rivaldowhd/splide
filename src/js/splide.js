@@ -64,7 +64,11 @@ export default class Splide {
 
 		try {
 			each( this.Components, ( component, key ) => {
-				const required = component.required;
+				let required = component.required;
+
+				if (typeof required === "function") {
+					required = required();
+				}
 
 				if ( required === undefined || required ) {
 					component.mount && component.mount();

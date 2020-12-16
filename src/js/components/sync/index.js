@@ -62,7 +62,9 @@ export default ( Splide ) => {
 		 *
 		 * @type {boolean}
 		 */
-		required: !! sibling,
+		required(){
+			return !! Splide.sibling;
+		},
 
 		/**
 		 * Called when the component is mounted.

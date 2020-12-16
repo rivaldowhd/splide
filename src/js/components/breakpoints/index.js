@@ -69,7 +69,9 @@ export default ( Splide ) => {
 		 *
 		 * @type {boolean}
 		 */
-		required: breakpoints && matchMedia,
+		required() {
+			return breakpoints && typeof matchMedia === "function";
+		},
 
 		/**
 		 * Called when the component is mounted.

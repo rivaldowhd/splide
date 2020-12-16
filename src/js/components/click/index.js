@@ -34,7 +34,9 @@ export default ( Splide, Components ) => {
 		 *
 		 * @type {boolean}
 		 */
-		required: Splide.options.drag,
+		required() {
+			return Splide.options.drag;
+		},
 
 		/**
 		 * Called when the component is mounted.

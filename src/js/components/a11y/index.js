@@ -51,7 +51,9 @@ export default ( Splide, Components ) => {
 		 *
 		 * @type {boolean}
 		 */
-		required: Splide.options.accessibility,
+		required() {
+			return Splide.options.accessibility
+		},
 
 		/**
 		 * Called when the component is mounted.

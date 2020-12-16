@@ -60,7 +60,9 @@ export default ( Splide, Components, name ) => {
 		 *
 		 * @type {boolean}
 		 */
-		required: Splide.options.autoplay,
+		required() {
+			return Splide.options.autoplay
+		},
 
 		/**
 		 * Called when the component is mounted.
